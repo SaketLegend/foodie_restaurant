@@ -28,7 +28,7 @@ const About = () => {
             <p className='text-3xl lilita text-[#EB5554]'>
                 Our History
                 </p>
-                <p className='text-xl lilita'>Foodie was founded in 1992 by John Doe, a passionate food lover with a vision to create a place where people could come together and enjoy delicious, high-quality food in a warm and welcoming environment. Over the years, Foodie has become a beloved dining destination for locals and visitors alike.</p>
+                <p className='text-xl xs:w-[130%] lilita'>Foodie was founded in 1992 by John Doe, a passionate food lover with a vision to create a place where people could come together and enjoy delicious, high-quality food in a warm and welcoming environment.</p>
             </div>
             <div className='w-[450px] xs:mr-[5%] h-[450px] rounded-full bg-[#FDE9DE] flex items-center justify-center overflow-hidden'>
                 <img className='w-[400px] rounded-xl' src={old} alt="" />
@@ -39,11 +39,11 @@ const About = () => {
             <div className='w-[450px] h-[450px] rounded-full bg-[#FDE9DE] flex items-center justify-center overflow-hidden'>
                 <img className='w-[400px] rounded-xl' src={cafe} alt="" />
             </div>
-            <div className='w-[500px] flex flex-col gap-5'>
+            <div className='w-[500px] xs:mr-[9%] flex flex-col gap-5'>
                 <p className='text-3xl lilita text-[#EB5554]'>
                 Our Quality
                 </p>
-                <p className='text-xl lilita xs:w-[85%]'>At Foodie, we believe that every meal should be a delightful experience. Nestled in the heart of City, our restaurant is dedicated to bringing you the finest culinary creations crafted with love and the freshest ingredients.</p>
+                <p className='text-xl lilita xs:w-[120%]'>At Foodie, we believe that every meal should be a delightful experience. Nestled in the heart of City, our restaurant is dedicated to bringing you the finest culinary.</p>
             </div>
         </div>
 

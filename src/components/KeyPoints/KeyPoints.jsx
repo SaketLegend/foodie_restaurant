@@ -3,7 +3,7 @@ import React from 'react'
 const KeyPoints = ({Points}) => {
   return (
     <div>
-      <div className='flex items-center gap-5'>
+      <div className='flex items-center xs:gap-2 gap-5'>
         <div className='w-[70px] xs:w-[50px] xs:ml-[2%] xs:h-[50px] flex justify-center items-center rounded-full h-[70px] bg-yellow-400'>
             <img className='w-[40px] ml xs:w-[30px]' src={Points.img} alt="" />
         </div>

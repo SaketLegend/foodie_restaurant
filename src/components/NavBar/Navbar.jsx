@@ -51,7 +51,7 @@ const Navbar = () => {
     <div>
       <div className='h-[120px] xs:h-[90px] items-center z-50 fixed top-0 bg-opacity-100 backdrop-filter backdrop-blur-lg w-screen flex justify-between'>
         <div className='ml-[4%]'>
-          <img className='w-[120px] xs:w-[100px]' src={logo} alt="" />
+          <img className='w-[120px] xs:w-[80px]' src={logo} alt="" />
         </div>
         <div className='xs:hidden'>
           <ul className='flex gap-8 text-xl text-gray-500'>
@@ -63,7 +63,7 @@ const Navbar = () => {
         <div className='flex gap-5 items-center mr-[4%] xs:mr-[4%]'>
           {isLoggedIn ? (
             <>
-              <div className='flex gap-5 xs:hidden'>
+              <div className='flex gap-5 mr-0 xs:hidden'>
                 <button onClick={toggle}><img className='w-[35px]' src={user} alt="" /></button>
                 {isOpen && (
                   <div className='h-[100px] flex items-center justify-around w-[170px] bg-white rounded-2xl'>

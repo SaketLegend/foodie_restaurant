@@ -131,7 +131,7 @@ const Landing = ({isAuthenticated}) => {
         <div className='ml-[6%] xs:ml-[0px] xs:mt-[90px] mt-[120px]'>
             <div className='flex xs:flex xs:items-center gap-4 flex-col'>
             <p className='text-7xl xs:text-4xl xs:mt-[250px] lilita mt-[50px] text-[#EB5554]'>All Fast Food is</p>
-            <p className='text-7xl xs:text-5xl lilita text-[#EB5554]'>Available at Foodie</p>
+            <p className='text-7xl xs:text-4xl lilita text-[#EB5554]'>Available at Foodie</p>
             </div>
             <div className='flex xs:hidden gap-5 mt-8'>
                 <div className='w-[50px] h-[50px] xs:w-[40px] xs:h-[40px] flex rounded-full items-center justify-center bg-yellow-300'>
@@ -165,7 +165,7 @@ const Landing = ({isAuthenticated}) => {
 
       {/* Here are the three main features of the foodie */}
 
-      <div className='absolute w-[80%] xs:w-[70%] h-[200px] xs:h-[500px] flex xs:flex xs:flex-col gap-16 items-center shadow-2xl rounded-3xl justify-center bg-white bottom-[-110px] xs:bottom-[-250px]'>
+      <div className='absolute w-[80%] xs:w-[85%] h-[200px] xs:h-[500px] flex xs:flex xs:flex-col gap-16 items-center shadow-2xl rounded-3xl justify-center bg-white bottom-[-110px] xs:bottom-[-250px]'>
         {Points.map((item, index) => (
           <KeyPoints Points={item} key={index}/>
         ))}

@@ -41,7 +41,7 @@ const SignUp = () => {
   return (
     <div>
       <div className='h-screen w-screen relative xs:flex xs:items-center xs:justify-center flex' style={{backgroundImage:`url(${back})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat'}}>
-        <div className='ml-[60%] xs:ml-0 flex flex-col overflow-hidden relative rounded-xl justify-center items-center right-0 xs:w-[60%] xs:h-[70%] xs:bg-opacity-70 xs:backdrop-filter xs:backdrop-blur-lg w-[40%] h-screen bg-white'>
+        <div className='ml-[60%] xs:ml-0 flex flex-col overflow-hidden relative rounded-xl justify-center items-center right-0 xs:w-[80%] xs:h-[70%] xs:bg-opacity-70 xs:backdrop-filter xs:backdrop-blur-lg w-[40%] h-screen bg-white'>
             <img className='absolute top-[-230px] w-full' src={img} alt="" />
             <img className='absolute bottom-[-250px] w-full' src={img} alt="" />
             <p className='lilita text-[#EB5554]  mb-5 text-4xl'>Sign Up</p>
