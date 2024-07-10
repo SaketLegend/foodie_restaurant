@@ -7,12 +7,13 @@ import up from '../../assets/up-arrow.webp'
 import down from '../../assets/down.webp'
 import { useCart } from '../../CartContext';
 import Swal from 'sweetalert2';
+import { motion,useScroll } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 
 const RegularMenu = ({famous, isAuthenticated}) => {
   const [quantity, setQuantity] = useState(0);
   const { addToCart, user } = useCart();
-  const navigate = useNavigate();
+  const {scrollYProgress} = useScroll()
 
   const handleQuantityChange = (event) => {
     setQuantity(parseInt(event.target.value));
@@ -53,7 +54,7 @@ const RegularMenu = ({famous, isAuthenticated}) => {
 
   return (
     <div>
-    <div className='h-[363px] w-[270px] xs:h-[250px] xs:w-[240px] rounded-2xl relative bg-[#FDE9DE]'>
+    <motion.div className='h-[363px] w-[270px] xs:h-[250px] xs:w-[240px] rounded-2xl relative bg-[#FDE9DE]'>
     <div className="absolute shadow-xl bg-no-repeat bg-cover top-[-40px] right-[-40px] rounded-full border-[10px] border-[#EB5554] w-[200px] h-[200px] xs:h-[150px] xs:w-[150px]" style={{backgroundImage:`url(${famous.img})`}}></div>
     <img className='w-[20px] h-[20px] absolute top-5 left-5' src={famous.type} alt="" />   
         <div className='flex flex-col'>
@@ -94,7 +95,7 @@ const RegularMenu = ({famous, isAuthenticated}) => {
             </div>
         </div>
     
-    </div>
+    </motion.div>
    </div>
   )
 }

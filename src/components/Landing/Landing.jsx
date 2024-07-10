@@ -26,12 +26,14 @@ import Poster from '../../assets/poster.webp';
 import Footer from '../Footer'
 import veg from '../../assets/veg.webp';
 import non from '../../assets/non-veg.webp';
-import About from '../Cards/About'
+import { motion } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
 
 const Landing = ({isAuthenticated}) => {
 
   const menus = useRef();
   const discounts = useRef();
+  const { ref: ref1, inView: inView1 } = useInView();
 
   const scrollHandler = (eleRef) =>{
     eleRef.current.scrollIntoView({behavior: 'smooth', top: eleRef.current.offsetTop})
@@ -130,8 +132,8 @@ const Landing = ({isAuthenticated}) => {
       <div className='h-[690px] w-screen xs:h-[950px] bg-[#FFF0E9] xs:flex xs:flex-col flex justify-between relative'>
         <div className='ml-[6%] xs:ml-[0px] xs:mt-[90px] mt-[120px]'>
             <div className='flex xs:flex xs:items-center gap-4 flex-col'>
-            <p className='text-7xl xs:text-4xl xs:mt-[250px] lilita mt-[50px] text-[#EB5554]'>All Fast Food is</p>
-            <p className='text-7xl xs:text-4xl lilita text-[#EB5554]'>Available at Foodie</p>
+            <motion.p initial={{x: -100}} animate={{x: 0}} className='text-7xl xs:text-4xl xs:mt-[250px] lilita mt-[50px] text-[#EB5554]'>All Fast Food is</motion.p>
+            <motion.p initial={{x: -100}} animate={{x: 0}} transition={{delay: "0.1"}} className='text-7xl xs:text-4xl lilita text-[#EB5554]'>Available at Foodie</motion.p>
             </div>
             <div className='flex xs:hidden gap-5 mt-8'>
                 <div className='w-[50px] h-[50px] xs:w-[40px] xs:h-[40px] flex rounded-full items-center justify-center bg-yellow-300'>
@@ -158,18 +160,18 @@ const Landing = ({isAuthenticated}) => {
           <img className='w-[150px]' src={arrow} alt="" />
         </div>
         <div className='mr-[7%] xs:flex xs:justify-center xs:items-center mt-[120px]'>
-          <img className='w-[450px] xs:top-28 xs:absolute xs:w-[210px] relative' src={sandwich} alt="food" />
+          <motion.img initial={{x: 100}} animate={{x: 0}} className='w-[450px] xs:top-28 xs:absolute xs:w-[210px] relative' src={sandwich} alt="food" />
         </div>
       </div>
 
 
       {/* Here are the three main features of the foodie */}
 
-      <div className='absolute w-[80%] xs:w-[85%] h-[200px] xs:h-[500px] flex xs:flex xs:flex-col gap-16 items-center shadow-2xl rounded-3xl justify-center bg-white bottom-[-110px] xs:bottom-[-250px]'>
+      <motion.div initial = {{y: -200}} animate = {{y:0}} className='absolute w-[80%] xs:w-[85%] h-[200px] xs:h-[500px] flex xs:flex xs:flex-col gap-16 items-center shadow-2xl rounded-3xl justify-center bg-white bottom-[-110px] xs:bottom-[-250px]'>
         {Points.map((item, index) => (
           <KeyPoints Points={item} key={index}/>
         ))}
-      </div>
+      </motion.div>
       </div>
 
 
@@ -194,11 +196,11 @@ const Landing = ({isAuthenticated}) => {
         <p className='w-[320px] xs:w-[250px] xs:text-[14px] text-gray-500'>Here are some of our best distributed Categories. If you want you can Order from Here</p>
       </div>
 
-      <div className='flex w-screen pl-[10%] pr-[10%] justify-center xs:gap-24 gap-32 mt-20 flex-wrap'>
+      <motion.div ref={ref1}  animate={{ opacity: inView1 ? 1 : 0, y: inView1 ? 0 : 50 }} className='flex w-screen pl-[10%] pr-[10%] justify-center xs:gap-24 gap-32 mt-20 flex-wrap'>
         {famous.map((item, index) =>(
           <RegularMenu key={index} famous={item} isAuthenticated={isAuthenticated}/>
         ))}
-      </div>
+      </motion.div>
       
 
       <div ref={discounts} className='m-5'>
