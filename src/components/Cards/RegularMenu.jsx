@@ -14,6 +14,7 @@ const RegularMenu = ({famous, isAuthenticated}) => {
   const [quantity, setQuantity] = useState(0);
   const { addToCart, user } = useCart();
   const {scrollYProgress} = useScroll()
+  const navigate = useNavigate()
 
   const handleQuantityChange = (event) => {
     setQuantity(parseInt(event.target.value));
